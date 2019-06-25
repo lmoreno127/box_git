@@ -16,4 +16,10 @@ class Box
     def initialize(empty)
         @empty
     end
-end   
+
+    def empty
+        @empty
+    end
+end
+
+b=Box.new(true)
