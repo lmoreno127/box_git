@@ -15,21 +15,26 @@
 class Box 
     def initialize()
         @empty=true
-        @stuffs=[]
+        @stuff=nil
     end
 
     def empty
         @empty
     end
     def add_stuff(s)
-        @stuffs.push(s)
+       if empty
+        @stuff=s
         @empty=false
+       else
+        puts "The box is full"    
+       end 
+        
     end
     def check_box
-        print "Object:#{@stuffs.class}, value: #{@stuffs}"
+        print "Object:#{@stuff.class}, value: #{@stuff}"
     end
 end
 
 b=Box.new()
-b.add_stuff(1)
+b.add_stuff([1,2,3,4])
 b.check_box
