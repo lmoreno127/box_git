@@ -33,12 +33,5 @@ class Box
     def check_box
         print "Object:#{@stuff.class}, value: #{@stuff}"
     end
-    def empty_box
-        if @empty
-            puts "There is nothing in the box"
-        else
-            @stuff=nil
-            @empty=true
-        end
-    end
+    
 end
