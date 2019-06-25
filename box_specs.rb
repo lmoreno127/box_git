@@ -24,6 +24,15 @@ describe Box do
             expect(box.empty?).to be false
             expect(box.check_box("apples")).to eq "The box is full"
          end
+         context 'discard items inside the box' do
+            let(:new_box) {Box.new.content([1,2,3])}
+
+            it "should get empty" do
+               expect(new_box.empty?).to be false
+               new_box.discard_item
+               expect(new_box.empty?).to be true
+            end
+         end
     end
         
 end   
