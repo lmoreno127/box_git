@@ -19,5 +19,11 @@ describe Box do
          it 'display check_box method' do
           expect(box.check_box).to eq "Object:Array, value: [1,2,3,4]"
          end
+         context 'storing a new object' do
+            box.store("apples")
+            expect(box.empty?).to be false
+            expect(box.check_box("apples")).to eq "The box is full"
+         end
     end
+        
 end   
