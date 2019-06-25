@@ -32,6 +32,7 @@ class Box
     end
     def check_box
         print "Object:#{@stuff.class}, value: #{@stuff}"
+        puts "methods:#{@content.methods}"
     end
     
 end
