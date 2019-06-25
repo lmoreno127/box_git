@@ -23,6 +23,7 @@ class Box
     end
     def add_stuff(s)
         @stuffs.push(s)
+        @empty=false
     end
 end
 
