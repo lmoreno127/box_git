@@ -15,5 +15,9 @@ describe Box do
              box.store([1,2,3,4]) 
              expect(box.empty?).to be false
          end
-     end
+
+         it 'display check_box method' do
+          expect(box.check_box).to eq "Object:Array, value: [1,2,3,4]"
+         end
+    end
 end   
