@@ -14,12 +14,16 @@
 # 8. add a method to empty the box and update its status, if the box is already empty, show the message: "there is nothing in the box"
 class Box 
     def initialize(empty)
-        @empty
+        @empty=true
+        @stuffs=[]
     end
 
     def empty
         @empty
     end
+    def add_stuff(s)
+        @stuffs.push(s)
+    end
 end
 
-b=Box.new(true)
+b=Box.new()
