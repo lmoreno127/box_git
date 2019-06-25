@@ -13,7 +13,7 @@
 
 # 8. add a method to empty the box and update its status, if the box is already empty, show the message: "there is nothing in the box"
 class Box 
-    def initialize(empty)
+    def initialize()
         @empty=true
         @stuffs=[]
     end
@@ -25,6 +25,11 @@ class Box
         @stuffs.push(s)
         @empty=false
     end
+    def check_box
+        print "Object:#{@stuffs.class}, value: #{@stuffs}"
+    end
 end
 
 b=Box.new()
+b.add_stuff(1)
+b.check_box
